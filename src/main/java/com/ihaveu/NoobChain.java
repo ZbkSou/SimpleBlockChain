@@ -4,19 +4,21 @@ import com.google.gson.GsonBuilder;
 import com.ihaveu.block.Block;
 import com.ihaveu.util.StringUtil;
 import com.ihaveu.wallet.Transaction;
+import com.ihaveu.wallet.TransactionOutput;
 import com.ihaveu.wallet.Wallet;
 
 import java.security.Security;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Created by ZBK on 2018-03-31.
  */
-public class NoodChain {
+public class NoobChain {
     public static ArrayList<Block> blockchain = new ArrayList<Block>();
-
+    public static HashMap<String,TransactionOutput> UTXOs = new HashMap<String,TransactionOutput>(); //list of all unspent transactions.
     public static int difficulty = 5;
-
+    public static int minimumTransaction =2;
     public static Wallet walletA;
     public static Wallet walletB;
     public static void main(String[] args) {
